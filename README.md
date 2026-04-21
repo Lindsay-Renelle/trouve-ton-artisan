@@ -25,7 +25,7 @@ L’objectif est de créer un site permettant de rechercher un artisan à partir
 ## Installation
 ### 1. Cloner le projet :
 '''bash
-git clone < >
+[git clone](https://github.com/Lindsay-Renelle/trouve-ton-artisan)
 
 ### 2. Installer les dépendances
 ```bash

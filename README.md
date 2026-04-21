@@ -17,7 +17,7 @@ L’objectif est de créer un site permettant de rechercher un artisan à partir
 - HTML / SCSS
 - Bootstrap
 - Figma (maquettes)
-- VS Code (développement)
+- VS Code 
 
 ## Maquettes Figma
 [Lien vers les maquettes Figma](https://www.figma.com/design/EMuI4yMqAw9eobNVPYN3Bb/Trouve-ton-artisan-%E2%80%93-Maquettes?node-id=180-131&p=f&t=7eMMh0y69jfeIIYs-0)
@@ -25,7 +25,7 @@ L’objectif est de créer un site permettant de rechercher un artisan à partir
 ## Installation
 ### 1. Cloner le projet :
 '''bash
-[git clone](https://github.com/Lindsay-Renelle/trouve-ton-artisan)
+git clone https://github.com/Lindsay-Renelle/trouve-ton-artisan.git
 
 ### 2. Installer les dépendances
 ```bash
@@ -35,13 +35,14 @@ npm install
 ```bash
 ng serve
 
-### 4. Ouvrir le navigateur à l’adresse : 
+### 4. Accéder au site
 - http://localhost:4200/
 
 ## Structure du projet
 - pages : pages principales
 - components : composants réutilisables
 - services : gestion des données
+- models : structure des données
 
 Auteur
 

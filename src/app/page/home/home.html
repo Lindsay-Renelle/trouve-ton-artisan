@@ -1,71 +1,48 @@
-<!-- ===== SECTION HERO (haut de page) ===== -->
-<section class="hero container text-center mt-5">
-  
-    <!-- Titre principal -->
-    <h1>Trouver un artisan près de chez vous</h1>
-  
-    <!-- Sous-titre -->
-    <p>Artisans locaux, qualité garantie</p>
-  
-    <!-- Zone de recherche -->
-    <div class="mt-4">
+<!-- ===== SECTION HERO ===== -->
+<section class="hero container mt-5">
+
+  <div class="hero-content mx-auto">
+
+    <h1 class="hero-title">Trouve ton artisan !</h1>
+    <p class="hero-subtitle">Artisans locaux, qualité garantie</p>
+
+    <div class="d-flex gap-2 mt-4 justify-content-center">
       
-      <!-- Champ de saisie -->
       <input 
-        type="text" 
-        class="form-control d-inline w-50" 
+        type="text"
+        class="form-control w-50"
         placeholder="Rechercher un artisan..."
+        [(ngModel)]="termeRecherche"
       >
-  
-      <!-- Bouton de recherche -->
-      <button class="btn btn-primary mt-2">
+
+      <button 
+        class="btn btn-primary"
+        (click)="rechercher()"
+      >
         Rechercher
       </button>
-  
+
     </div>
-  </section>
-  
-  
-  <!-- ===== SECTION ÉTAPES ===== -->
-  <section class="etapes container mt-5">
-  
-    <!-- Titre de la section -->
-    <h2 class="text-center mb-4">Comment trouver mon artisan ?</h2>
-  
-    <!-- Grille Bootstrap -->
-    <div class="row">
-  
-      <!-- ===== ÉTAPE 1 ===== -->
-      <div class="col-md-6 mb-3">
-        <div class="etape p-3 border rounded">
-          <span class="badge bg-primary">1</span>
-          <p>Choisir la catégorie d’artisanat dans le menu</p>
-        </div>
+
+  </div>
+
+</section>
+
+
+<!-- ===== SECTION ÉTAPES ===== -->
+<section class="etapes container mt-5">
+
+  <h2 class="text-center mb-4">Comment trouver mon artisan ?</h2>
+
+  <div class="row">
+
+    <div class="col-md-6 mb-3" *ngFor="let etape of etapes">
+      <div class="etape p-3 border rounded d-flex align-items-center gap-3">
+        <span class="badge bg-primary">{{ etape.id }}</span>
+        <p class="mb-0">{{ etape.texte }}</p>
       </div>
-  
-      <!-- ===== ÉTAPE 2 ===== -->
-      <div class="col-md-6 mb-3">
-        <div class="etape p-3 border rounded">
-          <span class="badge bg-primary">2</span>
-          <p>Choisir un artisan</p>
-        </div>
-      </div>
-  
-      <!-- ===== ÉTAPE 3 ===== -->
-      <div class="col-md-6 mb-3">
-        <div class="etape p-3 border rounded">
-          <span class="badge bg-primary">3</span>
-          <p>Le contacter via le formulaire de contact</p>
-        </div>
-      </div>
-  
-      <!-- ===== ÉTAPE 4 ===== -->
-      <div class="col-md-6 mb-3">
-        <div class="etape p-3 border rounded">
-          <span class="badge bg-primary">4</span>
-          <p>Une réponse sera apportée sous 48h</p>
-        </div>
-      </div>
-  
     </div>
-  </section>
+
+  </div>
+
+</section>

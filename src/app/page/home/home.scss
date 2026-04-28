@@ -1,0 +1,27 @@
+/* Hero */
+.hero-content {
+  max-width: 700px;
+  text-align: left;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00497c; 
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #384050; 
+}
+
+/* Étapes */
+.etape {
+  background: #f1f8fc; 
+  border-color: #0074c7; 
+  transition: 0.2s ease;
+}
+
+.etape:hover {
+  background: #ffffff;
+}

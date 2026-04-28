@@ -1,1 +1,57 @@
-<h1>Accueil</h1>
+<!-- ===== SECTION HERO ===== -->
+<section class="hero container mt-5">
+
+  <!-- Titre principal -->
+  <h1 class="hero-title">Trouve ton artisan !</h1>
+
+  <!-- Sous-titre -->
+  <p class="hero-subtitle">Artisans locaux, qualité garantie</p>
+
+  <!-- Zone de recherche -->
+  <div class="d-flex gap-2 mt-4 justify-content-center">
+
+    <!-- Champ de saisie -->
+    <input 
+      type="text"
+      class="form-control w-50"
+      placeholder="Rechercher un artisan..."
+      [(ngModel)]="termeRecherche"
+    >
+
+    <!-- Bouton -->
+    <button class="btn btn-primary" (click)="rechercher()">
+      Rechercher
+    </button>
+
+  </div>
+</section>
+
+
+<!-- ===== SECTION ÉTAPES ===== -->
+<section class="etapes container mt-5">
+
+  <!-- Titre de section -->
+  <h2 class="text-center mb-4">Comment trouver mon artisan ?</h2>
+
+  <!-- Grille des étapes -->
+  <div class="row">
+
+    @for (etape of etapes; track etape.id) {
+
+      <!-- Une étape -->
+      <div class="col-md-6 mb-3">
+        <div class="etape p-3 border rounded d-flex align-items-center gap-3">
+
+          <!-- Numéro -->
+          <span class="badge bg-primary">{{ etape.id }}</span>
+
+          <!-- Texte -->
+          <p class="mb-0">{{ etape.texte }}</p>
+
+        </div>
+      </div>
+
+    }
+
+  </div>
+</section>

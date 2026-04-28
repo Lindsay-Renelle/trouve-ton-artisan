@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+/* ===== POLICE GRAPHIK ===== */
+
+/* Regular (400) */
+@font-face {
+    font-family: 'Graphik';
+    src: url('/fonts/Graphik-Regular-Trial.woff') format('woff'),
+         url('/fonts/Graphik-Regular-Trial.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /* Semibold (600 ou 700 selon ton fichier) */
+  @font-face {
+    font-family: 'Graphik';
+    src: url('/fonts/Graphik-Semibold-Trial.woff') format('woff'),
+         url('/fonts/Graphik-Semibold-Trial.otf') format('opentype');
+    font-weight: 600; /* ou 700 si ton fichier est Bold-ish */
+    font-style: normal;
+  }
+  
+  /* Bold (700 ou 800 ou 900 selon ton fichier) */
+  @font-face {
+    font-family: 'Graphik';
+    src: url('/fonts/Graphik-Bold-Trial.woff') format('woff'),
+         url('/fonts/Graphik-Bold-Trial.otf') format('opentype');
+    font-weight: 700; /* ou 800/900 selon ton fichier */
+    font-style: normal;
+  }
+  
+  
+  /* ===== VARIABLES DE COULEURS ===== */
+  :root {
+    --bleu-clair: #f1f8fc;
+    --bleu: #0074c7;
+    --bleu-foncé: #00497c;
+    --gris: #384050;
+    --rouge: #cd2c2e;
+    --vert: #82b864;
+  }
+  
+  
+  /* ===== STYLE GLOBAL ===== */
+  body {
+    font-family: 'Graphik', sans-serif;
+    color: var(--gris);
+    background-color: #ffffff;
+  }
+  

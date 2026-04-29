@@ -1,4 +1,64 @@
-<a routerLink="/">Accueil</a>
-<a routerLink="/artisans">Artisans</a>
+<!-- Navbar Bootstrap -->
+<nav class="navbar navbar-expand-lg">
 
-<img src="image/logo.png" alt="Trouve ton artisan">
+    <div class="container">
+
+        <!-- Logo -->
+        <a class="navbar-brand" routerLink="/">
+            <img src="image/logo.png" alt="Logo Trouve ton artisan">
+        </a>
+
+        <!-- Bouton menu mobile -->
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <!-- Liens -->
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/">Accueil</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/artisans">Artisans</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Bâtiment</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+
+            </ul>
+
+            <!-- Barre recherche -->
+            <form class="d-flex">
+
+                <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Recherche"
+                >
+
+                <button class="btn btn-primary" type="submit">
+                    OK
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</nav>

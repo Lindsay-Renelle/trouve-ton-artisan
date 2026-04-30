@@ -1,12 +1,24 @@
 /* Navbar */
 .navbar {
     background-color: #0074c7;
-    padding: 15px 0;
+    padding: 20px 0;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+}
+.navbar-nav {
+    margin: 0 auto;
 }
 
 /* Logo */
 .navbar-brand img {
     width: 163px;
+}
+
+.navbar-brand {
+    margin-right: 20px;
 }
 
 /* Liens menu */
@@ -19,4 +31,14 @@
 /* Hover menu */
 .nav-link:hover {
     color: #82b864;
+    text-decoration: underline;
+}
+
+form {
+    margin-left: 20px;
+}
+
+/*Bouton*/
+button {
+    font-weight: 600;
 }

@@ -33,3 +33,43 @@ h1{
 .container {
   margin-top: 40px;
 }
+
+/* Artisans du mois */
+
+/* Carte artisan */
+.card {
+  border: none;
+  transition: 0.3s ease;
+}
+
+/* Effet hover */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre carte */
+.card-title {
+  color: #00497c;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+/* Étoiles */
+.text-warning {
+  font-size: 1.2rem;
+}
+
+/*RESPONSIVE */
+
+@media screen and (max-width: 768px) {
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  input {
+    width: 100% !important;
+  }
+
+}

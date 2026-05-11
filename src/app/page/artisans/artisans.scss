@@ -1,0 +1,34 @@
+/* === TITRE === */
+h1 {
+    color: #00497c;
+    font-weight: bold;
+  }
+  
+  /* === CARTE === */
+  .card {
+    border: none;
+    transition: 0.3s ease;
+  }
+  
+  /* Hover carte */
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Titre artisan */
+  .card-title {
+    color: #00497c;
+    font-size: 1.3rem;
+  }
+  
+  /* Note */
+  .note-artisan {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  /* Étoile */
+  .etoile {
+    color: #f1c40f;
+  }

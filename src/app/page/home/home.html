@@ -24,6 +24,7 @@
     </button>
 
   </div>
+
 </section>
 
 
@@ -31,7 +32,9 @@
 <section class="etapes container mt-5">
 
   <!-- Titre de section -->
-  <h2 class="text-center mb-4">Comment trouver mon artisan ?</h2>
+  <h2 class="text-center mb-4">
+    Comment trouver mon artisan ?
+  </h2>
 
   <!-- Grille des étapes -->
   <div class="row">
@@ -40,98 +43,84 @@
 
       <!-- Une étape -->
       <div class="col-md-6 mb-3">
+
         <div class="etape p-3 border rounded d-flex align-items-center gap-3">
 
           <!-- Numéro -->
-          <span class="badge bg-primary">{{ etape.id }}</span>
+          <span class="badge bg-primary">
+            {{ etape.id }}
+          </span>
 
           <!-- Texte -->
-          <p class="mb-0">{{ etape.texte }}</p>
+          <p class="mb-0">
+            {{ etape.texte }}
+          </p>
 
         </div>
+
       </div>
 
     }
 
   </div>
+
 </section>
+
 
 <!-- SECTION ARTISANS DU MOIS -->
 <section class="artisans container mt-5">
 
-  <!-- Titre de section -->
-  <h2 class="text-center mb-4">Les artisans du mois</h2>
+  <!-- Titre -->
+  <h2 class="text-center mb-4">
+    Les artisans du mois
+  </h2>
 
   <!-- Ligne Bootstrap -->
   <div class="row">
 
-    <!-- CARTE 1 -->
-    <div class="col-md-4 mb-4">
+    <!-- Cartes artisans -->
+    @for (artisan of artisansDuMois; track artisan.id) {
 
-      <div class="card h-100 shadow-sm">
+      <div class="col-md-4 mb-4">
 
-        <!-- Corps de carte -->
-        <div class="card-body">
+        <!-- Carte artisan -->
+        <div class="card h-100 shadow-sm">
 
-          <!-- Nom -->
-          <h3 class="card-title">Martin Menuiserie</h3>
+          <div class="card-body">
 
-          <!-- Note -->
-          <p class="text-warning">★★★★★</p>
+            <!-- Nom -->
+            <h3 class="card-title">
+              {{ artisan.name }}
+            </h3>
 
-          <!-- Spécialité -->
-          <p><strong>Spécialité :</strong> Menuiserie</p>
+            <!-- Note -->
+            <p class="text-warning note-artisan">
 
-          <!-- Ville -->
-          <p><strong>Ville :</strong> Lyon</p>
+              {{ artisan.note }}
+            
+              <span class="etoile">★</span>
+            
+            </p>
 
-        </div>
+            <!-- Spécialité -->
+            <p>
+              <strong>Spécialité :</strong>
+              {{ artisan.specialty }}
+            </p>
 
-      </div>
+            <!-- Ville -->
+            <p>
+              <strong>Ville :</strong>
+              {{ artisan.location }}
+            </p>
 
-    </div>
-
-    <!-- CARTE 2 -->
-    <div class="col-md-4 mb-4">
-
-      <div class="card h-100 shadow-sm">
-
-        <div class="card-body">
-
-          <h3 class="card-title">Dupont Électricité</h3>
-
-          <p class="text-warning">★★★★☆</p>
-
-          <p><strong>Spécialité :</strong> Électricité</p>
-
-          <p><strong>Ville :</strong> Villeurbanne</p>
+          </div>
 
         </div>
 
       </div>
 
-    </div>
-
-    <!-- CARTE 3 -->
-    <div class="col-md-4 mb-4">
-
-      <div class="card h-100 shadow-sm">
-
-        <div class="card-body">
-
-          <h3 class="card-title">Boulangerie Bernard</h3>
-
-          <p class="text-warning">★★★★★</p>
-
-          <p><strong>Spécialité :</strong> Boulangerie</p>
-
-          <p><strong>Ville :</strong> Lyon</p>
-
-        </div>
-
-      </div>
-
-    </div>
+    }
 
   </div>
 

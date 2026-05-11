@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
 
-/* Permet de faire des requêtes HTTP */
+/* Requêtes HTTP */
 import { HttpClient } from '@angular/common/http';
 
-/* Observable = données asynchrones */
+/* Observable */
 import { Observable } from 'rxjs';
+
+/* Modèle Artisan */
+import { Artisan } from '../models/artisan';
 
 @Injectable({
   providedIn: 'root',
@@ -12,13 +15,13 @@ import { Observable } from 'rxjs';
 
 export class ArtisansService {
 
-  /* Constructeur */
+  /* Injection HttpClient */
   constructor(private http: HttpClient) {}
 
-  /* Méthode qui récupère le JSON */
-  getArtisans(): Observable<any> {
+  /* Récupération du JSON */
+  getArtisans(): Observable<Artisan[]> {
 
-    return this.http.get('data/data.json');
+    return this.http.get<Artisan[]>('data/data.json');
 
   }
 

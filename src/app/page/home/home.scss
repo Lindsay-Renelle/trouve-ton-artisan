@@ -1,4 +1,4 @@
-/* Hero */
+/* === HERO === */
 .hero-content {
   max-width: 700px;
   text-align: left;
@@ -7,18 +7,25 @@
 .hero-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #00497c; 
+  color: #00497c;
 }
 
 .hero-subtitle {
   font-size: 1.2rem;
-  color: #384050; 
+  color: #384050;
 }
 
-/* Étapes */
+/* === ESPACEMENT DES SECTIONS === */
+.hero,
+.etapes,
+.artisans {
+  margin-top: 40px;
+}
+
+/* === ÉTAPES === */
 .etape {
-  background: #f1f8fc; 
-  border-color: #0074c7; 
+  background: #f1f8fc;
+  border-color: #0074c7;
   transition: 0.2s ease;
 }
 
@@ -26,17 +33,12 @@
   background: #ffffff;
 }
 
-h1{
+/* === TITRES === */
+h1 {
   font-weight: bold;
 }
 
-.hero,
-.etapes, 
-.artisans {
-  margin-top: 40px;
-}
-
-/* ARTISANS DU MOIS */
+/* === ARTISANS DU MOIS === */
 /* Carte artisan */
 .card {
   border: none;
@@ -56,15 +58,19 @@ h1{
   margin-bottom: 15px;
 }
 
-/* Étoiles */
-.text-warning {
+/* Note artisan */
+.note-artisan {
   font-size: 1.2rem;
+  font-weight: bold;
 }
 
-/*RESPONSIVE */
+/* Étoile */
+.etoile {
+  color: #f1c40f;
+}
 
+/* === RESPONSIVE === */
 @media screen and (max-width: 768px) {
-
   .hero-title {
     font-size: 2rem;
   }

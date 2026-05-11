@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
-/* Permet ngModel */
+/* Permet d'utiliser ngModel */
 import { FormsModule } from '@angular/forms';
 
 /* Directives Angular */
 import { CommonModule } from '@angular/common';
 
-/* Service artisans */
+/* Service des artisans */
 import { ArtisansService } from '../../services/artisans-service';
 
 @Component({
   selector: 'app-home',
+  standalone: true,
 
+  /* Modules utilisés dans le composant */
   imports: [
     CommonModule,
     FormsModule
@@ -21,15 +23,19 @@ import { ArtisansService } from '../../services/artisans-service';
   styleUrl: './home.scss'
 })
 
+/* Classe du composant Home */
 export class Home implements OnInit {
 
-  /* Tableau des artisans */
+  /* Tableau contenant tous les artisans */
   artisans: any[] = [];
 
-  /* Barre de recherche */
+  /* Tableau contenant les artisans du mois */
+  artisansDuMois: any[] = [];
+
+  /* Variable liée à la barre de recherche */
   termeRecherche = '';
 
-  /* Étapes */
+  /* Tableau des étapes */
   etapes = [
     {
       id: 1,
@@ -52,20 +58,32 @@ export class Home implements OnInit {
   /* Constructeur */
   constructor(private artisansService: ArtisansService) {}
 
-  /* Au chargement du composant */
+  /* Fonction exécutée au chargement de la page */
   ngOnInit(): void {
 
-    /* Récupération des données JSON */
+    /* Récupération des données du fichier JSON */
     this.artisansService.getArtisans().subscribe((data) => {
+
+      /* Affichage des données dans la console */
       console.log(data);
+
+      /* Stockage de tous les artisans */
       this.artisans = data;
+
+      /* Récupération des artisans du mois */
+      this.artisansDuMois = data.filter(
+        (artisan: any) => artisan.top === true
+      );
+
     });
 
   }
 
-  /* Fonction recherche */
+  /* Fonction de recherche */
   rechercher() {
+
     console.log(this.termeRecherche);
+
   }
 
 }

@@ -1,1 +1,53 @@
-<p>artisans works!</p>
+<!-- SECTION ARTISANS -->
+<section class="container mt-5">
+
+  <h1 class="mb-4 text-center">Tous nos artisans</h1>
+
+  <!-- Affiché pendant le chargement -->
+  <p class="text-center" *ngIf="!artisans || artisans.length === 0">
+    Chargement des artisans...
+  </p>
+
+  <!-- Affiché une fois les données chargées -->
+  <p class="text-center" *ngIf="artisans && artisans.length > 0">
+    Nombre d'artisans : {{ artisans.length }}
+  </p>
+
+  <div class="row">
+
+    <!-- Cartes artisans -->
+    <div class="col-md-4 mb-4" *ngFor="let artisan of artisans">
+
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+
+          <h2 class="card-title">{{ artisan.name }}</h2>
+
+          <p class="note-artisan">
+            {{ artisan.note }}
+            <span class="etoile">★</span>
+          </p>
+
+          <p>
+            <strong>Spécialité :</strong>
+            {{ artisan.specialty }}
+          </p>
+
+          <p>
+            <strong>Ville :</strong>
+            {{ artisan.location }}
+          </p>
+
+          <p>
+            <strong>Catégorie :</strong>
+            {{ artisan.category }}
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

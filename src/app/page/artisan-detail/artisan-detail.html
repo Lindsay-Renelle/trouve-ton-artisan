@@ -1,1 +1,55 @@
-<p>artisan-detail works!</p>
+<section class="container mt-5" *ngIf="artisan">
+
+  <!-- Nom -->
+  <h1 class="text-center mb-4">{{ artisan.name }}</h1>
+
+  <div class="card shadow-sm p-4">
+
+    <!-- Note -->
+    <p class="note-artisan text-center">
+      {{ artisan.note }} ★
+    </p>
+
+    <!-- Spécialité -->
+    <p>
+      <strong>Spécialité :</strong> {{ artisan.specialty }}
+    </p>
+
+    <!-- Description -->
+    <p>
+      <strong>Description :</strong><br>
+      {{ artisan.about }}
+    </p>
+
+    <!-- Email -->
+    <p>
+      <strong>Email :</strong>
+      <a [href]="'mailto:' + artisan.email">{{ artisan.email }}</a>
+    </p>
+
+    <!-- Site web -->
+    <p *ngIf="artisan.website">
+      <strong>Site web :</strong>
+      <a [href]="artisan.website" target="_blank">
+        {{ artisan.website }}
+      </a>
+    </p>
+
+    <!-- Ville -->
+    <p>
+      <strong>Ville :</strong> {{ artisan.location }}
+    </p>
+
+    <!-- Catégorie -->
+    <p>
+      <strong>Catégorie :</strong> {{ artisan.category }}
+    </p>
+
+  </div>
+
+</section>
+
+<!-- Si aucun artisan trouvé -->
+<p class="text-center mt-5" *ngIf="!artisan">
+  Artisan introuvable.
+</p>

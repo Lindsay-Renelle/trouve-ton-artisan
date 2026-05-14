@@ -1,34 +1,33 @@
 import { Routes } from '@angular/router';
 
-import { Home } from './page/home/home';
-import { Artisans } from './page/artisans/artisans';
-import { ArtisanDetail } from './page/artisan-detail/artisan-detail';
-import { NotFound } from './page/not-found/not-found';
-
 export const routes: Routes = [
 
   /* Accueil */
   {
     path: '',
-    component: Home
+    loadComponent: () =>
+      import('./page/home/home').then(m => m.Home)
   },
 
   /* Liste artisans */
   {
     path: 'artisans',
-    component: Artisans
+    loadComponent: () =>
+      import('./page/artisans/artisans').then(m => m.Artisans)
   },
 
   /* Détail artisan */
   {
     path: 'artisan/:id',
-    component: ArtisanDetail
+    loadComponent: () =>
+      import('./page/artisan-detail/artisan-detail').then(m => m.ArtisanDetail)
   },
 
   /* Page introuvable */
   {
     path: '**',
-    component: NotFound
+    loadComponent: () =>
+      import('./page/not-found/not-found').then(m => m.NotFound)
   }
 
 ];
